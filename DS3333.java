@@ -1,13 +1,15 @@
 public class DS3333 {
-    private static final int MOD = (int)1e9 + 7;
+    private static final int MOD = (int) 1e9 + 7;
 
     public int possibleStringCount(String word, int k) {
-        if (word.isEmpty()) return 0;
+        if (word.isEmpty())
+            return 0;
 
         List<Integer> groups = new ArrayList<>();
         int count = 1;
         for (int i = 1; i < word.length(); i++) {
-            if (word.charAt(i) == word.charAt(i - 1)) count++;
+            if (word.charAt(i) == word.charAt(i - 1))
+                count++;
             else {
                 groups.add(count);
                 count = 1;
@@ -16,9 +18,11 @@ public class DS3333 {
         groups.add(count);
 
         long total = 1;
-        for (int num : groups) total = (total * num) % MOD;
+        for (int num : groups)
+            total = (total * num) % MOD;
 
-        if (k <= groups.size()) return (int)total;
+        if (k <= groups.size())
+            return (int) total;
 
         int[] dp = new int[k];
         dp[0] = 1;
@@ -26,15 +30,26 @@ public class DS3333 {
             int[] newDp = new int[k];
             long sum = 0;
             for (int s = 0; s < k; s++) {
-                if (s > 0) sum = (sum + dp[s - 1]) % MOD;
-                if (s > num) sum = (sum - dp[s - num - 1] + MOD) % MOD;
-                newDp[s] = (int)sum;
+                if (s > 0)
+                    sum = (sum + dp[s - 1]) % MOD;
+                if (s > num)
+                    sum = (sum - dp[s - num - 1] + MOD) % MOD;
+                newDp[s] = (int) sum;
             }
             dp = newDp;
         }
         long invalid = 0;
-        for (int s = groups.size(); s < k; s++) invalid = (invalid + dp[s]) % MOD;
+        for (int s = groups.size(); s < k; s++)
+            invalid = (invalid + dp[s]) % MOD;
 
-        return (int)((total - invalid + MOD) % MOD);
+        return (int) ((total - invalid + MOD) % MOD);
+    }
+
+    public static void main(String[] args) {
+        DS3333 ds = new DS3333();
+        System.out.println(ds.possibleStringCount("aabbcc", 3)); // Output: 3
+        System.out.println(ds.possibleStringCount("abc", 2)); // Output: 3
+        System.out.println(ds.possibleStringCount("aaa", 1)); // Output: 1
+        System.out.println(ds.possibleStringCount("aabbcc", 4)); // Output: 0
     }
 }
