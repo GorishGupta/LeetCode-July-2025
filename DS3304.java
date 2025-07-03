@@ -9,4 +9,14 @@ class DS3304 {
         }
         return sb.charAt(k - 1);
     }
+
+    public static void main(String[] args) {
+        DS3304 ds = new DS3304();
+        System.out.println(ds.kthCharacter(1)); // Output: a
+        System.out.println(ds.kthCharacter(2)); // Output: b
+        System.out.println(ds.kthCharacter(3)); // Output: c
+        System.out.println(ds.kthCharacter(26)); // Output: z
+        System.out.println(ds.kthCharacter(27)); // Output: aa
+        System.out.println(ds.kthCharacter(28)); // Output: ab
+    }
 }
