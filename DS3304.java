@@ -1,4 +1,6 @@
-class DS3304 {
+import java.util.*;
+
+public class DS3304 {
     public char kthCharacter(int k) {
         StringBuilder sb = new StringBuilder("a");
         while (sb.length() < k) {
