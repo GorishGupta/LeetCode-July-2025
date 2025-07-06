@@ -51,4 +51,10 @@ class DS1865 {
         return res;
     }
 
+    public static void main(String[] args) {
+        DS1865 ds = new DS1865(new int[] { 1, 2, 3 }, new int[] { 3, 4, 5 });
+        System.out.println(ds.count(6)); // Output: 2
+        ds.add(0, 2);
+        System.out.println(ds.count(6)); // Output: 3
+    }
 }
