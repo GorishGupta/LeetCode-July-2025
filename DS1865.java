@@ -1,4 +1,6 @@
-class FindSumPairs {
+import java.util.*;
+
+class DS1865 {
     int[] nums1;
     int[] nums2;
 
@@ -6,7 +8,7 @@ class FindSumPairs {
     Map<Integer, Integer> mp2;
     List<Integer> sortedKeys1;
 
-    public FindSumPairs(int[] nums1, int[] nums2) {
+    public DS1865(int[] nums1, int[] nums2) {
         this.nums1 = nums1;
         this.nums2 = nums2;
 
