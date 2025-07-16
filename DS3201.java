@@ -14,4 +14,8 @@ class DS3201 {
         }
         return Math.max(both, Math.max(even, odd));
     }
+
+    public static void main(String[] args) {
+
+    }
 }
