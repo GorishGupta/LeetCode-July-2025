@@ -1,4 +1,4 @@
-class DS3201 {
+public class DS3201 {
     public int maximumLength(int[] nums) {
         int c = nums[0] % 2, odd = 0, even = 0, both = 0;
         for (int num : nums) {
