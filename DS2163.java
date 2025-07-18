@@ -56,4 +56,11 @@ public class DS2163 {
 
         return ret;
     }
+
+    public static void main(String[] args) {
+        DS2163 ds2163 = new DS2163();
+        System.out.println(ds2163.minimumDifference(new int[] { 1, 2, 3, 4, 5, 6 })); // Output: 0
+        System.out.println(ds2163.minimumDifference(new int[] { 7, 8, 9, 10, 11, 12 })); // Output: 0
+        System.out.println(ds2163.minimumDifference(new int[] { 1, 1000, 1001, 2000 })); // Output: 998
+    }
 }
