@@ -1,3 +1,5 @@
+import java.util.*;
+
 class DS2322 {
 
     public int minimumScore(int[] nums, int[][] edges) {
