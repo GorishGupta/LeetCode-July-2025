@@ -66,6 +66,7 @@ class DS2322 {
         out[x] = cnt[0];
     }
 
+    // Example usage
     public static void main(String[] args) {
         DS2322 solution = new DS2322();
         int[] nums = { 1, 2, 3, 4 };
