@@ -16,7 +16,7 @@ class DS1233 {
 
     public static void main(String[] args) {
         DS1233 ds1233 = new DS1233();
-        int[] nums = { 1, 2, 3, 4, 5, 6 };
-        System.out.println(ds1233.removeSubfolders(nums));
+        String[] folders = { "/a", "/a/b", "/c/d", "/c/d/e", "/c/f" };
+        List<String> result = ds1233.removeSubfolders(folders);
     }
 }
