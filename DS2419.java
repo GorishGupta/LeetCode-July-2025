@@ -24,8 +24,7 @@ public class DS2419 {
     public static void main(String[] args) {
         DS2419 ds = new DS2419();
         int[] nums = { 1, 2, 3, 4, 5, 5, 6, 7, 8, 9 };
-        System.out.println(ds.longestSubarray(nums)); 
+        System.out.println(ds.longestSubarray(nums));
         // Example output: 10
-        int[] nums2 = { 1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10 };
-        System.out.println(ds.longestSubarray(nums2));
+    }
 }
