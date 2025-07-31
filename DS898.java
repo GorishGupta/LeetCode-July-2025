@@ -14,4 +14,11 @@ class DS898 {
         }
         return result.size();
     }
+
+    public static void main(String[] args) {
+        DS898 ds = new DS898();
+        int[] arr = { 1, 2, 3, 4, 5 };
+        System.out.println(ds.subarrayBitwiseORs(arr));
+        // Example output: 15
+    }
 }
